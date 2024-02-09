@@ -94,7 +94,7 @@ let user={
     name:"max",
     age: 30
 }
-
+   
 
 let extendedUser={
     isAdmin: true,
@@ -102,6 +102,10 @@ let extendedUser={
 }
 
 console.log(extendedUser)
+
+
+
+
 
 
 

@@ -1,24 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
 
+//creating first custom component
+let descriptions=['Fundamental','Crucial','Core']
+
+function randomIntGen(max){
+     return Math.floor(Math.random()* (max +1));
+}
+
+
+let heading= "creating first custom react component"
+
+let dydesc= descriptions[randomIntGen(2)]
+function Header(){
+return(
+<article>
+  <header>
+    <img src={logo}  />
+    <h1>{heading}</h1>
+    <p>Posted by John Doe</p>
+    <p> {dydesc} additional information here</p>
+  </header>
+  <p>Lorem Ipsum dolor set amet....</p>
+</article>
+
+
+)
+}
+
+//pasing that component as a html element in app component 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Header></Header>
+    <div className="blank">
+       Lovely
     </div>
+    </>
   );
 }
 
