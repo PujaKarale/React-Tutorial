@@ -11,6 +11,7 @@ export default function List() {
    function  getData(data){
    setVal( data.target.value)
    console.log(val)
+   setPrint(false)
    }
   return (
     <div>
