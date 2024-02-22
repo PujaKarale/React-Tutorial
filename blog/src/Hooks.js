@@ -2,6 +2,7 @@ import React, { useSyncExternalStore } from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useMemo } from 'react'
+import { useRef } from 'react'
 
 
 //useeffect hook :=
@@ -34,7 +35,8 @@ export function Hooks(props) {
       <button onClick={()=>setData("experimental learning")}>Update Data</button>
       <button onClick={()=>setCount(count + 1)}>Update Count</button>
       <button onClick={()=> setName("useEffect hook in react")}>Update name</button>
-      <MemoHook/>
+       <MemoHook/> 
+      <RefHook/>
     </div>
 
   )
@@ -66,3 +68,29 @@ function MemoHook(){
     </div>
   )
 }
+
+//useRef hook:=
+
+function RefHook(){
+
+  let inputRef= useRef(null)
+ 
+ function handleInput (){
+     inputRef.current.value=1000 //value add hoyel on click vr
+     inputRef.current.style.color="red"
+     inputRef.current.focus()
+  }
+  return(
+    <div>
+    <h2>useRef hook in react</h2>
+     <input type="text" ref={inputRef} />
+     <button  onClick={handleInput}>Handle Input</button>
+
+    </div>
+
+
+  )
+}
+
+
+
