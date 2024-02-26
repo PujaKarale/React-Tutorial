@@ -15,14 +15,14 @@ function App() {
     <div>
         
     <BrowserRouter>
-    <Navbar/>
+    
       <Routes>
        <Route path="/home"  element={<Home></Home>}/> 
         <Route path="/about"  element={<About></About>}/>
-        {/* <Route path="*"  element={<h1>No page found</h1>}/> */}
-
+        <Route path="/"  element={<Navbar></Navbar>}/>
+       
         {/* handle 404 page error::=== */}
-         <Route path='/*' element={<Page404/>}></Route> 
+         <Route path="/*" element={<Page404/>}></Route> 
         {/* redirect to home page when route is not present:=== */}
         <Route path="/*" element={<Navigate to="/home" />} />
 
